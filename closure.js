@@ -1,3 +1,26 @@
+//recepy
+
+
+function checkscope() { // the parent function
+	var innerVar = "local scope var"; // var that can be accesed by the  child func
+
+	function innerFunc() { //define child fn  inside parent fn
+
+		return innerVar;
+	};
+	return innerFunc; // return it
+}
+
+var test = checkscope(); //run parent function and save to a variable
+// this variable will hold what the function returns
+
+test; // check what it contains
+test() // will run the inner fn
+
+
+
+//example 1
+
 var closureAlert = function() {
 	var x = 0;
 	var alerter = function() {
@@ -19,6 +42,7 @@ funcStorer(); // if it were to call closureAlert again , we would be resetting X
 var funcStorer2 = closureAlert();
 
 funcStorer();
+
 
 
 //example 2 
@@ -44,6 +68,7 @@ add5(2); //7
 
 
 //exanple 3
+//returns an object with 2 functions
 function counter() {
 	var n = 0;
 	return {
@@ -58,5 +83,5 @@ function counter() {
 
 };
 
-var mycounter= counter();
+var mycounter = counter();
 mycounter.count();
