@@ -40,3 +40,23 @@ var add5 = add(5);
 
 
 add5(2); //7
+
+
+
+//exanple 3
+function counter() {
+	var n = 0;
+	return {
+		count: function() {
+			return ++n;
+		},
+		reset: function() {
+			n = 0;
+		}
+	};
+
+
+};
+
+var mycounter= counter();
+mycounter.count();
