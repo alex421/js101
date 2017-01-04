@@ -24,4 +24,19 @@ var funcStorer2 = closureAlert();
 funcStorer();
 
 
-//s
+//example 2 
+
+
+var add = function(num) {
+	var num1 = num;
+
+	var addToNum1 = function(num2) {
+		return num1 + num2;
+	}
+
+	return addToNum1;
+}
+
+var add5 = add(5)
+
+add5(2); //7
