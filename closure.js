@@ -24,4 +24,4 @@ var funcStorer2 = closureAlert();
 funcStorer();
 
 
-//
+//s
