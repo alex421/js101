@@ -1,12 +1,9 @@
 var closureAlert = function() {
 	var x = 0;
-
 	var alerter = function() {
-
 		alert(++x);
 	};
 	console.log(alerter)
-
 	return alerter
 
 }
@@ -25,6 +22,7 @@ funcStorer();
 
 
 //example 2 
+// num1 will stay the same even if we call add5 multiple times
 
 
 var add = function(num) {
@@ -37,6 +35,8 @@ var add = function(num) {
 	return addToNum1;
 }
 
-var add5 = add(5)
+var add5 = add(5);
+
+
 
 add5(2); //7
